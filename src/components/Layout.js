@@ -12,7 +12,7 @@ import styled from 'styled-components';
 
 import Header from './Header';
 import Nav from './Nav';
-import './layout.css';
+import './Layout.css';
 
 const LayoutContainer = styled.div`
   border: 2px solid rgb(230, 230, 230);

@@ -1,13 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 const Headshot = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/me.jpg" }) {
+      file(relativePath: { eq: "me.jpg" }) {
         childImageSharp {
-          fixed {
+          fixed(width: 320) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -16,9 +17,11 @@ const Headshot = () => {
   `);
 
   return (
-    <div>
-      <Img fixed={data.file.childImageSharp.fixed} alt="Sean Heintz" />
-    </div>
+    <Img
+      style={{ borderRadius: '16px' }}
+      fixed={data.file.childImageSharp.fixed}
+      alt="Sean Heintz"
+    />
   );
 };
 

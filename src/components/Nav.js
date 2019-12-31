@@ -6,6 +6,8 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: flex-end;
   margin-right: 16px;
+  margin-left: 16px;
+  border-bottom: 1px solid #99999945;
 `;
 
 const NavLink = styled(Link)`
@@ -29,8 +31,6 @@ const Nav = () => {
       <NavLink to="/" activeStyle={activeStyle}>
         Home
       </NavLink>
-      <NavLink to="/">Portfolio</NavLink>
-      <NavLink to="/">Resume</NavLink>
     </NavContainer>
   );
 };

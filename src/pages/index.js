@@ -16,6 +16,8 @@ const FlexContainer = styled.div`
 
 const BodyTextContainer = styled.div`
   padding-left: 16px;
+  flex-basis: 45%;
+  flex-grow: 1;
 `;
 
 const BodyText = styled.p`
